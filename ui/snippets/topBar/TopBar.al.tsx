@@ -149,12 +149,12 @@ const TopBar = () => {
       window.location.reload();
     }
   };
-  const handleSwitchL2 = function() {
-    return handleChangeNetwork('l2');
-  };
-  const handleSwitchShard1 = function() {
-    return handleChangeNetwork('shard1');
-  };
+  // const handleSwitchL2 = function() {
+  //   return handleChangeNetwork('l2');
+  // };
+  // const handleSwitchShard1 = function() {
+  //   return handleChangeNetwork('shard1');
+  // };
   // const handleSwitchShard2 = function() {
   //   return handleChangeNetwork('shard2');
   // };
@@ -210,20 +210,19 @@ const TopBar = () => {
             <DropDownIcon width="2" marginLeft="1"/>
           </MenuButton>
           <MenuList>
-            <MenuItem fontSize="14px" fontWeight={ 600 } as="a"
-              // eslint-disable-next-line react/jsx-no-bind
-              onClick={ handleSwitchL2 }
-              href="#">
-              { /* <NavLinkIcon item={ apiNavMenuItems.respApi }/> */ }
-              <Text marginLeft={ 1 }>L2</Text>
-            </MenuItem>
-            <MenuItem fontSize="14px" fontWeight={ 600 } as="a"
-              // eslint-disable-next-line react/jsx-no-bind
-              onClick={ handleSwitchShard1 }
-              href="#">
-              { /* <NavLinkIcon item={ apiNavMenuItems.graphQL }/> */ }
-              <Text marginLeft={ 1 }>Shard 1</Text>
-            </MenuItem>
+            { Object.keys(alNetworkConfig).map(key => {
+              const item = alNetworkConfig[key];
+              // eslint-disable-next-line react/jsx-wrap-multilines
+              return <MenuItem fontSize="14px" fontWeight={ 600 } as="a" key={ `mi-${ key }` }
+                // eslint-disable-next-line react/jsx-no-bind
+                onClick={ () => {
+                  handleChangeNetwork(key);
+                } }
+                href="#">
+                { /* <NavLinkIcon item={ apiNavMenuItems.respApi }/> */ }
+                <Text marginLeft={ 1 }>{ item['name'] }</Text>
+              </MenuItem>;
+            }) }
             { /* <MenuItem fontSize="14px" fontWeight={ 600 } as="a"
               // eslint-disable-next-line react/jsx-no-bind
               onClick={ handleSwitchShard2 }

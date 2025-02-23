@@ -45,6 +45,7 @@ const basePathShard = stripTrailingSlash(getEnvValue('NEXT_PUBLIC_SHARD_API_BASE
 
 export const alNetworkConfig: any = {
   l2: {
+    name: 'L2',
     host: apiHost || 'explorer-devnet.adventurelayer.xyz',
     protocol: apiSchema || 'https',
     port: apiPort || '',
@@ -53,6 +54,7 @@ export const alNetworkConfig: any = {
     basePath: basePath || '/l2',
   },
   shard1: {
+    name: 'Shard 1',
     host: apiHostShard || 'explorer-devnet.adventurelayer.xyz',
     protocol: apiSchemaShard || 'https',
     port: apiPortShard || '',
