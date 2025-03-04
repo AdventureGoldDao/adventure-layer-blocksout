@@ -99,6 +99,7 @@ export const SOLIDITYSCAN_REPORT: SolidityscanReport = {
       score_v2: '72.22', // Version 2 score
       threat_score: '94.74', // Threat score
     },
+    // eslint-disable-next-line max-len
     scanner_reference_url: 'https://solidityscan.com/quickscan/0xc1EF7811FF2ebFB74F80ed7423f2AdAA37454be2/blockscout/eth-goerli?ref=blockscout', // URL for the scan report
   },
 };

@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import * as promClient from 'prom-client';
 
 // Check if Prometheus metrics are enabled via environment variable
+/* eslint-disable-next-line no-restricted-properties */
 const isEnabled = process.env.PROMETHEUS_METRICS_ENABLED === 'true';
 
 // Initialize Prometheus metrics collection if enabled
