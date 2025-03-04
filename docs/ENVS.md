@@ -106,6 +106,30 @@ Please be aware that all environment variables prefixed with `NEXT_PUBLIC_` will
 
 &nbsp;
 
+## L2 API configuration
+
+| Variable | Type| Description | Compulsoriness  | Default value | Example value |
+| --- | --- | --- | --- | --- | --- |
+| NEXT_PUBLIC_L2_API_PROTOCOL | `http \| https` | Main API protocol | - | `https` | `http` |
+| NEXT_PUBLIC_L2_API_HOST | `string` | Main API host | Required | - | `blockscout.com` |
+| NEXT_PUBLIC_L2_API_PORT | `number` | Port where API is running on the host | - | - | `3001` |
+| NEXT_PUBLIC_L2_API_BASE_PATH | `string` | Base path for Main API endpoint url | - | - | `/poa/core` |
+| NEXT_PUBLIC_L2_API_WEBSOCKET_PROTOCOL | `ws \| wss` | Main API websocket protocol | - | `wss` | `ws` |
+
+&nbsp;
+
+## Shard API configuration
+
+| Variable | Type| Description | Compulsoriness  | Default value | Example value |
+| --- | --- | --- | --- | --- | --- |
+| NEXT_PUBLIC_SHARD_API_PROTOCOL | `http \| https` | Main API protocol | - | `https` | `http` |
+| NEXT_PUBLIC_SHARD_API_HOST | `string` | Main API host | Required | - | `blockscout.com` |
+| NEXT_PUBLIC_SHARD_API_PORT | `number` | Port where API is running on the host | - | - | `3001` |
+| NEXT_PUBLIC_SHARD_API_BASE_PATH | `string` | Base path for Main API endpoint url | - | - | `/poa/core` |
+| NEXT_PUBLIC_SHARD_API_WEBSOCKET_PROTOCOL | `ws \| wss` | Main API websocket protocol | - | `wss` | `ws` |
+
+&nbsp;
+
 ## UI configuration
 
 ### Homepage
