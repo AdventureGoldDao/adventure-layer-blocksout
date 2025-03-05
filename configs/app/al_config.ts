@@ -51,7 +51,7 @@ export const alNetworkConfig: any = {
     port: apiPort || '',
     endpoint: apiEndpoint || 'https://explorer-devnet.adventurelayer.xyz',
     socket: socketEndpoint || 'wss://explorer-devnet.adventurelayer.xyz',
-    basePath: basePath || '/l2',
+    basePath: basePath,
   },
   shard1: {
     name: 'Shard 1',
@@ -60,7 +60,7 @@ export const alNetworkConfig: any = {
     port: apiPortShard || '',
     endpoint: apiEndpointShard || 'https://explorer-devnet.adventurelayer.xyz',
     socket: socketEndpointShard || 'wss://explorer-devnet.adventurelayer.xyz',
-    basePath: basePathShard || '/shard1',
+    basePath: basePathShard,
   },
   // shard2: {
   //   host: 'explorer-devnet.adventurelayer.xyz',
