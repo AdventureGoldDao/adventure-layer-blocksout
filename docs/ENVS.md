@@ -115,6 +115,10 @@ Please be aware that all environment variables prefixed with `NEXT_PUBLIC_` will
 | NEXT_PUBLIC_L2_API_PORT | `number` | Port where API is running on the host | - | - | `3001` |
 | NEXT_PUBLIC_L2_API_BASE_PATH | `string` | Base path for Main API endpoint url | - | - | `/poa/core` |
 | NEXT_PUBLIC_L2_API_WEBSOCKET_PROTOCOL | `ws \| wss` | Main API websocket protocol | - | `wss` | `ws` |
+| NEXT_PUBLIC_L2_STATS_API_HOST | `string` | Stats API host | Required | - | `http://blockscout.com:8080` |
+| NEXT_PUBLIC_L2_VISUALIZE_API_HOST | `string` | VISUALIZE API host | Required | - | `http://blockscout.com:8081` |
+| NEXT_PUBLIC_L2_STATS_API_BASE_PATH | `string` | Base path for Stats API endpoint url | - | - | `/poa/core` |
+| NEXT_PUBLIC_L2_VISUALIZE_API_BASE_PATH | `string` | Base path for Visualize API endpoint url | - | - | `/poa/core` |
 
 &nbsp;
 
@@ -127,6 +131,10 @@ Please be aware that all environment variables prefixed with `NEXT_PUBLIC_` will
 | NEXT_PUBLIC_SHARD_API_PORT | `number` | Port where API is running on the host | - | - | `3001` |
 | NEXT_PUBLIC_SHARD_API_BASE_PATH | `string` | Base path for Main API endpoint url | - | - | `/poa/core` |
 | NEXT_PUBLIC_SHARD_API_WEBSOCKET_PROTOCOL | `ws \| wss` | Main API websocket protocol | - | `wss` | `ws` |
+| NEXT_PUBLIC_SHARD_STATS_API_HOST | `string` | Stats API host | Required | - | `http://blockscout.com:8080` |
+| NEXT_PUBLIC_SHARD_VISUALIZE_API_HOST | `string` | VISUALIZE API host | Required | - | `http://blockscout.com:8081` |
+| NEXT_PUBLIC_SHARD_STATS_API_BASE_PATH | `string` | Base path for Stats API endpoint url | - | - | `/poa/core` |
+| NEXT_PUBLIC_SHARD_VISUALIZE_API_BASE_PATH | `string` | Base path for Visualize API endpoint url | - | - | `/poa/core` |
 
 &nbsp;
 

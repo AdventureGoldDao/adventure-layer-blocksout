@@ -43,6 +43,16 @@ const socketEndpointShard = [
 ].filter(Boolean).join('');
 const basePathShard = stripTrailingSlash(getEnvValue('NEXT_PUBLIC_SHARD_API_BASE_PATH') || '');
 
+const apiStatsEndpoint = getEnvValue('NEXT_PUBLIC_L2_STATS_API_HOST');
+const apiVisualizeEndpoint = getEnvValue('NEXT_PUBLIC_L2_VISUALIZE_API_HOST');
+const apiStatsBasePath = stripTrailingSlash(getEnvValue('NEXT_PUBLIC_L2_STATS_API_BASE_PATH') || '');
+const apiVisualizeBasePath = stripTrailingSlash(getEnvValue('NEXT_PUBLIC_L2_VISUALIZE_API_BASE_PATH') || '');
+
+const apiStatsEndpointShard = getEnvValue('NEXT_PUBLIC_SHARD_STATS_API_HOST');
+const apiVisualizeEndpointShard = getEnvValue('NEXT_PUBLIC_SHARD_VISUALIZE_API_HOST');
+const apiStatsBasePathShard = stripTrailingSlash(getEnvValue('NEXT_PUBLIC_SHARD_STATS_API_BASE_PATH') || '');
+const apiVisualizeBasePathShard = stripTrailingSlash(getEnvValue('NEXT_PUBLIC_SHARD_VISUALIZE_API_BASE_PATH') || '');
+
 export const alNetworkConfig: any = {
   l2: {
     name: 'L2',
@@ -52,6 +62,10 @@ export const alNetworkConfig: any = {
     endpoint: apiEndpoint || 'https://explorer-devnet.adventurelayer.xyz',
     socket: socketEndpoint || 'wss://explorer-devnet.adventurelayer.xyz',
     basePath: basePath,
+    stats_endpoint: apiStatsEndpoint,
+    stats_basepath: apiStatsBasePath,
+    visualize_endpoint: apiVisualizeEndpoint,
+    visualize_basepath: apiVisualizeBasePath,
   },
   shard1: {
     name: 'Shard 1',
@@ -61,6 +75,10 @@ export const alNetworkConfig: any = {
     endpoint: apiEndpointShard || 'https://explorer-devnet.adventurelayer.xyz',
     socket: socketEndpointShard || 'wss://explorer-devnet.adventurelayer.xyz',
     basePath: basePathShard,
+    stats_endpoint: apiStatsEndpointShard,
+    stats_basepath: apiStatsBasePathShard,
+    visualize_endpoint: apiVisualizeEndpointShard,
+    visualize_basepath: apiVisualizeBasePathShard,
   },
   // shard2: {
   //   host: 'explorer-devnet.adventurelayer.xyz',

@@ -672,12 +672,22 @@ const schema = yup
     NEXT_PUBLIC_L2_API_WEBSOCKET_PROTOCOL: yup.string().oneOf([ 'ws', 'wss' ]),
     NEXT_PUBLIC_L2_API_BASE_PATH: yup.string(),
 
+    NEXT_PUBLIC_L2_STATS_API_HOST: yup.string().test(urlTest),
+    NEXT_PUBLIC_L2_STATS_API_BASE_PATH: yup.string(),
+    NEXT_PUBLIC_L2_VISUALIZE_API_HOST: yup.string().test(urlTest),
+    NEXT_PUBLIC_L2_VISUALIZE_API_BASE_PATH: yup.string(),
+
     // Set Shard Backend API
     NEXT_PUBLIC_SHARD_API_HOST: yup.string(),
     NEXT_PUBLIC_SHARD_API_PROTOCOL: yup.string().oneOf(protocols),
     NEXT_PUBLIC_SHARD_API_PORT: yup.number().integer().positive(),
     NEXT_PUBLIC_SHARD_API_WEBSOCKET_PROTOCOL: yup.string().oneOf([ 'ws', 'wss' ]),
     NEXT_PUBLIC_SHARD_API_BASE_PATH: yup.string(),
+
+    NEXT_PUBLIC_SHARD_STATS_API_HOST: yup.string().test(urlTest),
+    NEXT_PUBLIC_SHARD_STATS_API_BASE_PATH: yup.string(),
+    NEXT_PUBLIC_SHARD_VISUALIZE_API_HOST: yup.string().test(urlTest),
+    NEXT_PUBLIC_SHARD_VISUALIZE_API_BASE_PATH: yup.string(),
 
     // Misc
     NEXT_PUBLIC_USE_NEXT_JS_PROXY: yup.boolean(),
